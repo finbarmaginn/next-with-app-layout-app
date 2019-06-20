@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div>
+    <div className="wrapper">
       <h2>About</h2>
     </div>
   )
