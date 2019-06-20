@@ -17,7 +17,11 @@ class Nav extends React.Component {
   render() {
     return (
       <div className="main-menu">
-        <button onClick={this.handleClick}>Menu</button>
+        <button onClick={this.handleClick} className={(this.state.active ? "active" : "")}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
         <nav className={(this.state.active ? "active" : "")}>
           <ul>
             <li><Link href="/"><a onClick={this.handleClick}>Home</a></Link></li>
@@ -36,11 +40,39 @@ class Nav extends React.Component {
               min-width: 48px;
               min-height: 48px;
               box-sizing: border-box;
+              background: none;
               margin: 0;
               padding: 0;
               cursor: pointer;
               border: 0;
-              background; gray;
+            }
+            div.main-menu button div {
+              height: calc(48px / 5);
+              width: 100%;
+              background: black;
+              position: absolute;
+              top: 0;
+              right:0;
+              transition: all 0.3s ease-out;
+            }
+            div.main-menu button div:nth-child(2) {
+              top: calc(48px - calc(calc(48px / 5) * 3));
+            }
+            div.main-menu button div:nth-child(3) {
+              top: calc(48px - calc(48px / 5));
+            }
+            div.main-menu button.active div:nth-child(1) {
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              top: calc(calc(48px / 5) * 2)
+            }
+            div.main-menu button.active div:nth-child(2) {
+              width: 0;
+            }
+            div.main-menu button.active div:nth-child(3) {
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              top: calc(calc(48px / 5) * 2)
             }
             nav {
               -webkit-transition: all 0.3s ease-out;
