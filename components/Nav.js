@@ -54,21 +54,24 @@ class Nav extends React.Component {
               display:block;
               position: absolute;
               right: 0;
+              min-width: 200px;
             }
             nav.active {
-              max-height: 67px;
+              max-height: 100px;
             }
             nav ul {
               padding: 0;
+              margin: 0;
               list-style-type: none;
               text-align: center;
             }
             nav ul li {
               display:block;
+              padding: 1px 0;
             }
             nav ul li a {
-              padding: 5px;
-              display:inline-block;
+              display:block;
+              line-height: 48px;
             }
           `}
         </style>
