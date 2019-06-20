@@ -5,8 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build",
-    "postinstall": "next build"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "next": "8.1.0",
