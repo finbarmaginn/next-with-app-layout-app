@@ -27,7 +27,7 @@ class MyDocument extends Document {
                 text-decoration: none;
               }
               div.wrapper {
-                max-width:960px;
+                max-width:1200px;
                 position: relative;
                 margin: 0 auto;
                 padding: 0 5px;
