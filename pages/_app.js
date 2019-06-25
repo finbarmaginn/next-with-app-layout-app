@@ -31,7 +31,6 @@ class Layout extends React.Component {
               font-family:"Titillium Web";
               //font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
               font-weight: 300;
-              font-display: auto;
             }
             a {
               text-decoration: none;
@@ -68,7 +67,11 @@ export default class MyApp extends App {
     import('webfontloader').then(WebFont =>
       WebFont.load({
         google: {
-          families: ['Titillium Web:300,400,700', 'sans-serif', 'Niconne']
+          families: [
+            'Titillium Web:300,400,700&display=auto',
+            'sans-serif&display=auto',
+            'Niconne&display=auto'
+          ]
         }
       })
     )
