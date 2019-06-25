@@ -2,9 +2,27 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import NProgress from 'nprogress';
+import Router from 'next/router';
+
+
+NProgress.configure({
+  showSpinner: false,
+  // minimum: 0.2,
+  // trickleRate: 0.4,
+  // trickleSpeed: 500
+})
+Router.events.on('routeChangeStart', url => {
+  NProgress.start();
+})
+
+Router.events.on('routeChangeComplete', url => {
+  NProgress.done()
+})
+Router.events.on('routeChangeError', () => NProgress.done())
+
 
 class Layout extends React.Component {
-
   render() {
     const { children } = this.props
     return (

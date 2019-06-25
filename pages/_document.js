@@ -16,6 +16,7 @@ class MyDocument extends Document {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+          <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
           <style jsx global>{`
               html {overflow-y:scroll}
             `}</style>
