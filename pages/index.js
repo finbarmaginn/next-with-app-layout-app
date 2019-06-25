@@ -2,6 +2,7 @@ import { Parallax } from 'react-parallax'
 import plx1 from '../static/plx1.jpg'
 import plx2 from '../static/plx2.jpg'
 import plx3 from '../static/plx3.jpg'
+
 export default () => {
   return (
     <div>
@@ -12,7 +13,7 @@ export default () => {
         <Parallax
           bgImage={plx1}
           strength={200}
-          blur={{ min: -15, max: 15 }}
+          blur={{ min: -5, max: 5 }}
         >
           <div className="lax-item wrapper"><h2>Parallax content goes here</h2></div>
         </Parallax>

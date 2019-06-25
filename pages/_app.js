@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 class Layout extends React.Component {
+
   render() {
     const { children } = this.props
     return (
@@ -12,7 +13,8 @@ class Layout extends React.Component {
           {`
             body { 
               margin: 0;
-              font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+              font-family:"Titillium Web";
+              //font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
               font-weight: 300;
             }
             a {
@@ -41,6 +43,15 @@ class Layout extends React.Component {
 }
 
 export default class MyApp extends App {
+  componentDidMount() {
+    import('webfontloader').then(WebFont =>
+      WebFont.load({
+        google: {
+          families: ['Titillium Web:300,400,700', 'sans-serif']
+        }
+      })
+    )
+  }
   render() {
     const { Component, pageProps } = this.props
     return (
