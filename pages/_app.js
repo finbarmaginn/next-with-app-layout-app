@@ -31,6 +31,7 @@ class Layout extends React.Component {
               font-family:"Titillium Web";
               //font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
               font-weight: 300;
+              font-display: auto;
             }
             a {
               text-decoration: none;
