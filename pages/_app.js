@@ -7,10 +7,7 @@ import Router from 'next/router';
 
 
 NProgress.configure({
-  showSpinner: false,
-  // minimum: 0.2,
-  // trickleRate: 0.4,
-  // trickleSpeed: 500
+  showSpinner: false
 })
 Router.events.on('routeChangeStart', url => {
   NProgress.start();
