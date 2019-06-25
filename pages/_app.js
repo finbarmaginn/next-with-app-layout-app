@@ -68,9 +68,9 @@ export default class MyApp extends App {
       WebFont.load({
         google: {
           families: [
-            'Titillium Web:300,400,700&display=auto',
-            'sans-serif&display=auto',
-            'Niconne&display=auto'
+            'Titillium Web:300,400,700',
+            'sans-serif',
+            'Niconne'
           ]
         }
       })
