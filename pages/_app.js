@@ -29,8 +29,13 @@ class Layout extends React.Component {
             h1, h2, h3, h4, h5, h6, p, ul {
               margin: 5px 0;
             }
+            h1, h2, h3, h4, h5, h6 {
+              font-family: "Niconne";
+              font-size:28px;
+            }
             h1 {
               line-height:48px;
+              font-size: 36px;
             }
           `}
         </style>
@@ -47,7 +52,7 @@ export default class MyApp extends App {
     import('webfontloader').then(WebFont =>
       WebFont.load({
         google: {
-          families: ['Titillium Web:300,400,700', 'sans-serif']
+          families: ['Titillium Web:300,400,700', 'sans-serif', 'Niconne']
         }
       })
     )

@@ -12,9 +12,15 @@ function Header() {
       </div>
       <style jsx>
         {`
+          header {
+            background: #7f5890;
+          }
           header div.logo a,
           header div.logo a h1 {
             display: inline-block;
+          }
+          header div.logo a h1 {
+            color: white;
           }
         `}
       </style>

@@ -49,7 +49,7 @@ class Nav extends React.Component {
             div.main-menu button div {
               height: calc(48px / 5);
               width: 100%;
-              background: black;
+              background: white;
               position: absolute;
               top: 0;
               right:0;
@@ -82,7 +82,7 @@ class Nav extends React.Component {
                       transition: all 0.3s ease-out;
               max-height: 0;
               overflow: hidden;
-              background: #e6e6e6;
+              background: rgba(127,88,144,0.9);
               display:block;
               position: absolute;
               right: 0;
@@ -104,6 +104,10 @@ class Nav extends React.Component {
             nav ul li a {
               display:block;
               line-height: 48px;
+              color: white;
+              font-weight:bold;
+              font-family: "Niconne";
+              font-size:22px;
             }
           `}
         </style>
