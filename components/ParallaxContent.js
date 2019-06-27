@@ -1,6 +1,6 @@
 import React from 'react'
 import { Parallax } from 'react-parallax'
-import plx1 from '../static/plx1.jpg'
+
 import plx2 from '../static/plx2.jpg'
 import plx3 from '../static/plx3.jpg'
 
@@ -13,7 +13,7 @@ class ParallaxContent extends React.Component {
       <div>
         <div className="parallax-wrap">
           <Parallax
-            bgImage={plx1}
+            bgImage={plx3}
             strength={500}
             blur={{ min: -5, max: 5 }}
           >
