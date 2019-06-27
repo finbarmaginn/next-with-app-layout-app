@@ -21,6 +21,7 @@ function Header() {
           }
           header div.logo a h1 {
             color: white;
+            margin: 10px 0;
           }
         `}
       </style>

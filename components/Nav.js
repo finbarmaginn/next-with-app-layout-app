@@ -32,8 +32,8 @@ class Nav extends React.Component {
           {`
             div.main-menu {
               position: absolute;
-              top: 5px;
-              right: 5px;
+              top: 10px;
+              right: 10px;
               z-index: 999999;
             }
             div.main-menu button {
