@@ -21,6 +21,7 @@ class Nav extends React.Component {
           <div></div>
           <div></div>
           <div></div>
+          Menu
         </button>
         <nav className={(this.state.active ? "active" : "")}>
           <ul>
@@ -40,11 +41,13 @@ class Nav extends React.Component {
               min-width: 48px;
               min-height: 48px;
               box-sizing: border-box;
-              background: none;
               margin: 0;
               padding: 0;
               cursor: pointer;
               border: 0;
+              font-size: 0;
+              background: #7f5890;
+              color:white;
             }
             div.main-menu button div {
               height: calc(48px / 5);

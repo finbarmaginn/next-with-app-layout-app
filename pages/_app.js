@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NProgress from 'nprogress';
 import Router from 'next/router';
-
+import Head from 'next/head'
 
 NProgress.configure({
   showSpinner: false
@@ -12,9 +12,13 @@ NProgress.configure({
 Router.events.on('routeChangeStart', url => {
   NProgress.start();
 })
-
 Router.events.on('routeChangeComplete', url => {
-  NProgress.done()
+  NProgress.done();
+  console.log(url)
+  var path = url.replace("/", ""),
+    title = (path === "" ? "Home" : path.charAt(0).toUpperCase() + path.slice(1));
+
+  document.title = title + " | Finbar Maginn 2019";
 })
 Router.events.on('routeChangeError', () => NProgress.done())
 
@@ -190,12 +194,27 @@ class Layout extends React.Component {
 }
 
 export default class MyApp extends App {
+  constructor(props) {
+    super(props)
+    this.state = {
+      title: "Finbar Maginn 2019"
+    }
+  }
   componentDidMount() {
+    const path = document.location.pathname.replace("/", "");
+    const title = (path === "" ? "Home" : path.charAt(0).toUpperCase() + path.slice(1));
+    this.setState(state => ({
+      title: title + " | Finbar Maginn 2019"
+    }))
   }
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
+    const { title } = this.state;
     return (
       <Container>
+        <Head>
+          <title>{title}</title>
+        </Head>
         <Layout>
           <Component {...pageProps} />
         </Layout>
@@ -203,3 +222,4 @@ export default class MyApp extends App {
     )
   }
 }
+
