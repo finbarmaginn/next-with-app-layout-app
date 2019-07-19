@@ -14,14 +14,14 @@ class ParallaxContent extends React.Component {
         <div className="parallax-wrap">
           <Parallax
             bgImage={plx3}
-            strength={500}
+            // strength={500}
             blur={{ min: -5, max: 5 }}
           >
             <div className="lax-item wrapper"><h2>Parallax content goes here</h2></div>
           </Parallax>
           <Parallax
             bgImage={plx2}
-            strength={500}
+          // strength={500}
           >
             <div className="lax-item wrapper">
               <h2>More content here</h2>
@@ -30,7 +30,7 @@ class ParallaxContent extends React.Component {
           </Parallax>
           <Parallax
             bgImage={plx3}
-            strength={500}
+          // strength={500}
           >
             <div className="lax-item wrapper">
               <h2>More content here</h2>
@@ -54,15 +54,16 @@ class ParallaxContent extends React.Component {
             margin:calc(100vh / 3.5) auto;
           }
           img.react-parallax-bgimage {
-            height: auto !important;
-            width: 110vw !important;
+            width: 130vw !important;
+            height: auto !important
           }
           div.react-parallax-content ul {
             text-align: left;
           }
-          @media screen and (max-width:720px){
+          @media screen and (max-width:900px){
             img.react-parallax-bgimage {
-              {/* width: 130vw !important; */}
+              height: 110vh !important;
+              width: auto !important;
             }
           }
           @media screen and (max-width:520px){
