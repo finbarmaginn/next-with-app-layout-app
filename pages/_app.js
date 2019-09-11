@@ -37,6 +37,11 @@ class Layout extends React.Component {
               overflow-y: scroll
             }
 
+            img {
+              max-width: 50%;
+              float:left;
+              margin-right: 10px;
+            }
             /* latin-ext */
 
             @font-face {

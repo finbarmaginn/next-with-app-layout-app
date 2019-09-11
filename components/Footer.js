@@ -7,7 +7,9 @@ export default () => {
       <style jsx>
         {`
           footer {
+            clear:both;
             text-align: center;
+            padding: 10px 0;
           }
         `}
       </style>

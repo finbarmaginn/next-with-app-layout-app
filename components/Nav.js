@@ -27,6 +27,7 @@ class Nav extends React.Component {
           <ul>
             <li><Link href="/"><a onClick={this.handleClick}>Home</a></Link></li>
             <li><Link href="/about"><a onClick={this.handleClick}>About</a></Link></li>
+            <li><Link href="/contact"><a onClick={this.handleClick}>Contact</a></Link></li>
           </ul>
         </nav>
         <style jsx>
@@ -92,7 +93,7 @@ class Nav extends React.Component {
               min-width: 200px;
             }
             nav.active {
-              max-height: 100px;
+              max-height: 200px;
             }
             nav ul {
               padding: 0;

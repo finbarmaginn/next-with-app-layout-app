@@ -6,7 +6,7 @@ function Header() {
     <header>
       <div className="wrapper">
         <div className="logo">
-          <Link href="/"><a><h1>Finbar Maginn 2019</h1></a></Link>
+          <Link href="/"><a><h1>Foobar Magoobar</h1></a></Link>
         </div>
         <Nav />
       </div>
